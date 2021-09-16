@@ -20,7 +20,11 @@ function App() {
     observer.current = new IntersectionObserver(entries => {
       //if that entry[0]/node is somewhere on the page
       if (entries[0].isIntersecting && hasMore)
+      {
+        console.log("Visible")
         setPage(prevPage => prevPage + 1)
+      }
+        
     })
 
     //if something is our last element we make sure the observer is observing it
